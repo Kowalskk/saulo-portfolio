@@ -1587,17 +1587,15 @@
         <!-- ProphetLabs -->
         <a href="https://prophetlabs.vercel.app/" target="_blank" class="glass project-card project-card-link glass-green reveal">
           <div class="project-meta">
-            <span class="project-status status-deployed">Deployed</span>
+            <span class="project-status status-deployed">Live</span>
             <h3>ProphetLabs <span style="font-size: 14px; opacity: 0.5; font-family: 'Space Mono', monospace;">↗</span></h3>
             <div class="project-type">Prediction Market Arbitrage Engine</div>
-            <p class="project-desc">Cross-platform arbitrage detection between Polymarket and Opinion Labs with
-              real-time WebSocket price streaming. Multi-strategy framework with three-pass matching engine and LLM
-              validation.</p>
+            <p class="project-desc">Real-time arbitrage detection: Polymarket ↔ Opinion Labs ↔ Kalshi ↔ Predict. 
+              Features WebSocket price streaming and a three-pass matching engine with LLM validation.</p>
             <div class="project-tech">
+              <span class="tag">Python</span>
               <span class="tag">FastAPI</span>
-              <span class="tag">React</span>
               <span class="tag">WebSocket</span>
-              <span class="tag">Telegram</span>
               <span class="tag">LLM</span>
             </div>
           </div>
@@ -1613,88 +1611,108 @@
           </div>
         </a>
 
+        <!-- Telegram Mirror Bot -->
+        <div class="glass project-card glass-blue reveal">
+          <div class="project-meta">
+            <span class="project-status status-deployed">Live</span>
+            <h3>Telegram Mirror Bot</h3>
+            <div class="project-type">Message Scraper & Forwarder</div>
+            <p class="project-desc">Professional Telegram scraper and message mirror. High-performance forwarding/copying 
+              with advanced filtering algorithms and independent bot control for remote operations.</p>
+            <div class="project-tech">
+              <span class="tag">Node.js</span>
+              <span class="tag">Aiogram</span>
+              <span class="tag">Scraper</span>
+              <span class="tag">Async</span>
+            </div>
+          </div>
+          <div class="project-visual pv-2" style="background: linear-gradient(135deg, rgba(100, 140, 255, 0.2), rgba(160, 120, 255, 0.1));">
+            <span class="pv-label">TM</span>
+            <span class="pv-terminal">mirror-bot.log</span>
+          </div>
+        </div>
+
         <!-- Funding Radar -->
         <div class="glass project-card glass-blue reveal">
           <div class="project-meta">
-            <span class="project-status status-deployed">Deployed</span>
+            <span class="project-status status-deployed">Live</span>
             <h3>Funding Radar</h3>
             <div class="project-type">DEX Funding Rate Aggregator</div>
-            <p class="project-desc">Aggregates perpetual futures funding rates across Hyperliquid and Aster. Dockerized
-              deployment with automated data pipeline, Redis caching, and Telegram alert system.</p>
+            <p class="project-desc">Aggregates perpetual futures funding rates across Hyperliquid and Aster to identify 
+              arbitrage signals. Automated data pipeline with real-time alerting system.</p>
             <div class="project-tech">
               <span class="tag">FastAPI</span>
+              <span class="tag">Hyperliquid</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">Docker</span>
               <span class="tag">Redis</span>
             </div>
           </div>
-          <div class="project-visual pv-2">
+          <div class="project-visual pv-3">
             <span class="pv-label">FR</span>
             <span class="pv-terminal">funding-rates.log</span>
+          </div>
+        </div>
+
+        <!-- Solarized -->
+        <div class="glass project-card reveal">
+          <div class="project-meta">
+            <span class="project-status status-deployed">Live</span>
+            <h3>Solarized</h3>
+            <div class="project-type">Solana Forensic Tracing Engine</div>
+            <p class="project-desc">Institutional-grade wallet analysis engine. Traces complex multi-hop fund flows and 
+              provides smart money detection using Helius and Birdeye APIs.</p>
+            <div class="project-tech">
+              <span class="tag">Solana</span>
+              <span class="tag">Forensics</span>
+              <span class="tag">Helius API</span>
+              <span class="tag">Dune SQL</span>
+            </div>
+          </div>
+          <div class="project-visual pv-4">
+            <span class="pv-label">SZ</span>
+            <span class="pv-terminal">forensic-trace.log</span>
+          </div>
+        </div>
+
+        <!-- X SNIPE BOT -->
+        <div class="glass project-card reveal">
+          <div class="project-meta">
+            <span class="project-status status-deployed">Live</span>
+            <h3>X SNIPE BOT</h3>
+            <div class="project-type">Social-Data Trading Bot</div>
+            <p class="project-desc">High-performance engine designed to monitor Twitter accounts and correlate social 
+              signals with new token launches on Binance Smart Chain via Four.Meme.</p>
+            <div class="project-tech">
+              <span class="tag">Twitter API</span>
+              <span class="tag">BSC</span>
+              <span class="tag">HFT</span>
+              <span class="tag">Node.js</span>
+            </div>
+          </div>
+          <div class="project-visual pv-5">
+            <span class="pv-label">XB</span>
+            <span class="pv-terminal">sniping-engine.log</span>
           </div>
         </div>
 
         <!-- Meteora LP Agent -->
         <div class="glass project-card glass-purple reveal">
           <div class="project-meta">
-            <span class="project-status status-prototype">Architecture</span>
+            <span class="project-status status-prototype">Spec / Prototype</span>
             <h3>Meteora LP Agent</h3>
             <div class="project-type">Autonomous Liquidity Agent — Solana</div>
-            <p class="project-desc">Autonomous agent for Meteora DLMM pool management with contextual bandit (LinUCB)
-              learning. Integrates Helius RPC, Jito bundles, and social intelligence from Discord and Twitter.</p>
+            <p class="project-desc">Autonomous Solana liquidity agent for DLMM pools with contextual bandit learning. 
+              Designed for high-efficiency yield optimization on Meteora DEX.</p>
             <div class="project-tech">
               <span class="tag">Solana</span>
-              <span class="tag">Helius</span>
-              <span class="tag">Jito</span>
               <span class="tag">LinUCB</span>
+              <span class="tag">Meteora</span>
+              <span class="tag">Jito</span>
             </div>
           </div>
-          <div class="project-visual pv-3">
+          <div class="project-visual pv-6" style="background: linear-gradient(135deg, rgba(160, 120, 255, 0.2), rgba(100, 140, 255, 0.1));">
             <span class="pv-label">LP</span>
-            <span class="pv-terminal">lp-agent.log</span>
-          </div>
-        </div>
-
-        <!-- On-Chain Intelligence -->
-        <div class="glass project-card reveal">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Deployed</span>
-            <h3>On-Chain Intelligence Suite</h3>
-            <div class="project-type">Smart Money Detection & Analytics</div>
-            <p class="project-desc">Dune SQL queries optimized from 30-min to seconds. Custom wallet tracking across
-              Jupiter, Orca, Raydium, Pump.fun. Token holder analysis with Birdeye + Helius APIs.</p>
-            <div class="project-tech">
-              <span class="tag">Dune SQL</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Birdeye</span>
-              <span class="tag">Helius</span>
-            </div>
-          </div>
-          <div class="project-visual pv-4">
-            <span class="pv-label">OC</span>
-            <span class="pv-terminal">smart-money.log</span>
-          </div>
-        </div>
-
-        <!-- Trading Bots -->
-        <div class="glass project-card reveal">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Deployed</span>
-            <h3>Trading Bots</h3>
-            <div class="project-type">Multi-Chain Execution Tools</div>
-            <p class="project-desc">BSC copytrading bot with HFT-grade optimizations: nonce management,
-              approve-sniffing, gas optimization. Polymarket multi-strategy bots. All with Telegram-first remote
-              control.</p>
-            <div class="project-tech">
-              <span class="tag">BSC</span>
-              <span class="tag">Polymarket</span>
-              <span class="tag">Telegram</span>
-              <span class="tag">HFT</span>
-            </div>
-          </div>
-          <div class="project-visual pv-5">
-            <span class="pv-label">TB</span>
-            <span class="pv-terminal">trade-exec.log</span>
+            <span class="pv-terminal">prototype-v0.log</span>
           </div>
         </div>
       </div>
