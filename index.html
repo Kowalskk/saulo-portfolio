@@ -22,6 +22,7 @@
       --text-mid: #d1d1e0;
       --text-dim: #b0b0cc;
       --text-muted: #8e8ea6;
+      --text-secondary: #b0b0cc;
       --accent: #56c49a;
       --accent-light: #7af5c0;
       --accent-tint: rgba(86, 196, 154, 0.1);
@@ -770,32 +771,7 @@
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 32px;
-      align-items: stretch;
-    }
-
-    .about-left {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .about-block {
-      padding: 32px;
-      height: 100%;
-    }
-
-    .about-block.backstory {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-mid);
-    }
-
-    .about-block.backstory p {
-      margin-bottom: 20px;
-    }
-
-    .about-block.backstory p:last-child {
-      margin-bottom: 0;
+      align-items: start;
     }
 
     .about-block h3 {
@@ -828,22 +804,73 @@
       flex-shrink: 0;
     }
 
-    .about-tagline {
-      grid-column: 1 / -1;
-      margin-top: 40px;
-      padding: 24px;
-      text-align: center;
+    .about-header-muted {
       font-family: 'Space Mono', monospace;
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--accent);
-      font-style: italic;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
     }
 
-    .about-timeline {
+    .about-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-bullet-list li {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .about-bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    .about-statement {
+      grid-column: 1 / -1;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--glass-border-subtle);
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 32px);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .about-footer-text {
+      grid-column: 1 / -1;
+      margin-top: 16px;
+      font-size: 16px;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    .about-signature {
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       gap: 4px;
+    }
+
+    .signature-weird {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .signature-weird em {
+      font-family: 'Space Mono', monospace;
+      font-style: italic;
+      color: var(--accent);
     }
 
     .about-text {
@@ -854,6 +881,10 @@
 
     .about-text p {
       margin-bottom: 18px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
     }
 
     .about-text strong {
@@ -885,7 +916,7 @@
 
     .tl-year {
       font-family: 'Syne', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--accent);
       min-width: 48px;
@@ -894,14 +925,14 @@
 
     .tl-body h4 {
       font-family: 'Syne', sans-serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--text);
       margin-bottom: 2px;
     }
 
     .tl-body p {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-muted);
       line-height: 1.5;
     }
@@ -1597,6 +1628,8 @@
       backdrop-filter: url(#liquid-glass-filter);
       -webkit-backdrop-filter: url(#liquid-glass-filter);
       isolation: isolate;
+    }
+
     @media (max-width: 992px) {
       .about-grid {
         grid-template-columns: 1fr;
@@ -1865,44 +1898,28 @@
       <h2 class="section-title reveal">Not a developer. A builder.</h2>
 
       <div class="about-grid">
-        <div class="about-left reveal">
-          <!-- BLOCK 1: The Backstory -->
-          <div class="glass about-block backstory">
-            <h3>The Backstory</h3>
-            <p>I grew up in Costa da Morte, a tiny coastal town in Galicia, Spain. Had a PC since I was a kid. Spent
-              my teenage years in cybercafés playing <span class="hl">Starcraft, Diablo, and Counter-Strike</span>, then
-              moved to high-end World of Warcraft guilds — top Spanish PvE guilds, endgame raiding at weird hours.
-            </p>
-            <p>Gaming taught me everything that matters: how to grind when nobody's watching, how to research in English
-              before anyone around me spoke it, how to read group dynamics and spot patterns. It also made me deeply
-              comfortable with <span class="hl">complex systems</span>, which is basically what crypto is.</p>
-            <p>No university. I joined the family glass factory at 19 and spent 13 years building it into something real
-              — Inditex, Ikea, Mercadona as clients, €1M revenue, 8 employees. Then I left it all to go <span
-                class="hl">full-time crypto from Dubai</span>.</p>
-            <p>I don't have credentials. <strong>I have proof of work.</strong></p>
+        <div class="about-left reveal" style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- BLOCK 1: I'M CURRENTLY... -->
+          <div class="glass about-block" style="padding: 32px;">
+            <span class="about-header-muted">I'M CURRENTLY...</span>
+            <ul class="about-bullet-list">
+              <li>building with Claude & Antigravity. no coding background, first time in my life I feel like I have superpowers</li>
+              <li>researching DeFi protocols and finding edge in inefficient markets</li>
+              <li>living in Dubai, tracking on-chain intelligence and DeFi trends</li>
+              <li>shipping prototypes in record time.</li>
+              <li>going down rabbit holes I have no business being in</li>
+            </ul>
           </div>
 
-          <!-- BLOCK 2: When I'm Not On-Chain -->
-          <div class="glass about-block">
-            <h3>When I'm Not On-Chain</h3>
-            <div class="off-chain-grid">
-              <div class="off-chain-item">
-                <span>🎮</span>
-                Lifelong gamer — WoW endgame, SC
-              </div>
-              <div class="off-chain-item">
-                <span>🌊</span>
-                Costa da Morte roots — Atlantic kid
-              </div>
-              <div class="off-chain-item">
-                <span>☕</span>
-                Dubai coffee shop builder — my office
-              </div>
-              <div class="off-chain-item">
-                <span>🎯</span>
-                Pattern recognition addict — systems
-              </div>
-            </div>
+          <!-- BLOCK 2: I'M EXCITED ABOUT... -->
+          <div class="glass about-block" style="padding: 32px;">
+            <span class="about-header-muted">I'M EXCITED ABOUT...</span>
+            <ul class="about-bullet-list">
+              <li>curiosity compounding: research → alpha → products → repeat</li>
+              <li>strategic product advising: turning bold ideas into market-ready prototypes</li>
+              <li>inefficient markets: finding the signal in the noise of fragmented markets</li>
+              <li>making tools I actually want to exist</li>
+            </ul>
           </div>
         </div>
 
@@ -1942,10 +1959,6 @@
               <p>Full-time shipping tools. 10+ systems deployed. Looking for the right team.</p>
             </div>
           </div>
-        </div>
-
-        <div class="about-tagline reveal">
-          Weird over boring. Every single time.
         </div>
       </div>
     </div>
