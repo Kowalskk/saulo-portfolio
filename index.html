@@ -18,10 +18,10 @@
       --glass-border-subtle: rgba(200, 200, 210, 0.4);
       --glass-shadow: rgba(0, 0, 0, 0.06);
       --glass-inner-glow: rgba(255, 255, 255, 0.8);
-      --text: #1a1a2e;
-      --text-mid: #6a6a8e;
-      --text-dim: #9b9bcd;
-      --text-muted: #bcbcff;
+      --text: #ffffff;
+      --text-mid: #d1d1e0;
+      --text-dim: #b0b0cc;
+      --text-muted: #8e8ea6;
       --accent: #56c49a;
       --accent-light: #7af5c0;
       --accent-tint: rgba(86, 196, 154, 0.1);
@@ -360,6 +360,7 @@
           #8a8aa0 100%);
       background-size: 300% 300%;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shimmer 8s ease infinite;
     }
@@ -381,7 +382,8 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: var(--text-muted);
+      color: #ffffff;
+      opacity: 0.85;
       margin-bottom: 28px;
     }
 
@@ -476,7 +478,8 @@
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: var(--text-muted);
+      color: #ffffff;
+      opacity: 0.75;
       margin-top: 4px;
       display: block;
     }
@@ -1226,9 +1229,9 @@
       --glass-shadow: rgba(0, 0, 0, 0.5);
       --glass-inner-glow: rgba(255, 255, 255, 0.15);
       --text: #ffffff;
-      --text-mid: #e2e2e5;
-      --text-dim: #b0b0b8;
-      --text-muted: #80808a;
+      --text-mid: #ffffff;
+      --text-dim: #d1d1e0;
+      --text-muted: #b0b0cc;
       --accent: #7af5c0;
     }
 
@@ -1377,7 +1380,8 @@
     .contact-btn-glass {
       background: rgba(255, 255, 255, 0.05) !important;
       border: 1px solid rgba(255, 255, 255, 0.1) !important;
-      color: var(--text-mid) !important;
+      color: #ffffff !important;
+      opacity: 0.9 !important;
       backdrop-filter: blur(16px) !important;
     }
 
@@ -1427,7 +1431,7 @@
     }
 
     .pv-label {
-      color: rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.3) !important;
     }
 
     .pv-terminal {
@@ -1611,7 +1615,7 @@
           <div class="project-preview">
             <!-- Video preview component -->
             <video class="preview-video" poster="prophet_preview.png" autoplay muted loop playsinline>
-              <source src="prophetlabs_walkthrough.mp4" type="video/mp4">
+              <source src="My visuals/Prophet.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <div class="hover-overlay">

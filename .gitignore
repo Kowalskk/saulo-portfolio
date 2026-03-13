@@ -1,0 +1,25 @@
+.vercel
+*.png
+*.mp4
+!My visuals/bg_cinematic.mp4
+!My visuals/Prophet.mp4
+!prophetlabs_walkthrough.mp4
+target_version.html
+Saulo_Torrado_CV_*.docx
+Saulo_Project_Context*.md
+Mi vida.txt
+curriulum.txt
+generate_glass_portfolio.py
+saulo_torrado_portfolio*.html
+prophetlabs_walkthrough_full.mp4
+restored_readability.png
+prophet_video_verify.png
+pastebin context.txt
+FrontendV/
+Trove visuals/
+# Ignore everything in My visuals except what's needed
+My visuals/*
+!My visuals/bg_cinematic.mp4
+!My visuals/Prophet.mp4
+!My visuals/unnamed.jpg
+!My visuals/saulo_profile.jpg
