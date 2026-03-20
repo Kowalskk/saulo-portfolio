@@ -1864,7 +1864,7 @@
         </div>
 
         <!-- Meteora LP Agent -->
-        <div class="glass project-card glass-purple reveal">
+        <a href="https://github.com/Kowalskk/meteora-lp-agent" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration: none; color: inherit;">
           <div class="project-meta">
             <span class="project-status status-prototype">Spec / Prototype</span>
             <h3>Meteora LP Agent</h3>
@@ -1878,15 +1878,18 @@
               <span class="tag">Jito</span>
             </div>
           </div>
-          <div class="project-visual pv-6" style="background: #0a0a0a; position: relative; overflow: hidden;">
-            <!-- Video preview -->
-            <video src="assets/Meteora.mp4" autoplay muted loop playsinline
-              style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div class="project-visual pv-6" style="background: #0a0a0a; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <!-- Video preview with better loading -->
+            <video preload="metadata" autoplay muted loop playsinline
+              style="width: 100%; height: 100%; object-fit: cover; display: block; background: #000;">
+              <source src="assets/Meteora.mp4" type="video/mp4">
             </video>
             <!-- Overlay gradient -->
             <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.25)); pointer-events: none;"></div>
+            <!-- Link indicator -->
+            <span class="pv-terminal" style="position: absolute; bottom: 10px; right: 12px; font-size: 11px; z-index: 11; color: #56c49a;">→ GitHub</span>
           </div>
-        </div>
+        </a>
 
         <!-- PRJX Design Test -->
         <a href="https://www.figma.com/design/ahwcKvcJf40T8O1Du8sNQL/PRJX-PROPOSAL?node-id=0-1&t=HuzJUF4xZCWbstdv-1" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
