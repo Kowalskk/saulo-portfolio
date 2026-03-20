@@ -1902,10 +1902,37 @@
               <span class="tag">Brand Design</span>
             </div>
           </div>
-          <div class="project-visual pv-6"
-            style="background: linear-gradient(135deg, rgba(255, 204, 2, 0.2), rgba(86, 196, 154, 0.1));">
-            <span class="pv-label">PX</span>
-            <span class="pv-terminal">→ Open in Figma</span>
+          <div class="project-visual pv-6" style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <!-- Animated gradient overlay -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(255, 204, 2, 0.1), transparent 50%, rgba(86, 196, 154, 0.1)); animation: gradientShift 6s ease infinite;"></div>
+
+            <!-- Numbers composition -->
+            <div style="position: relative; z-index: 2; text-align: center; display: flex; flex-direction: column; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 800;">
+              <!-- 30B -->
+              <div style="font-size: 48px; color: #FFCC02; text-shadow: 0 0 20px rgba(255, 204, 2, 0.6);">
+                30B
+              </div>
+              <!-- Divider -->
+              <div style="height: 2px; width: 60px; margin: 0 auto; background: linear-gradient(90deg, transparent, #56c49a, transparent);"></div>
+              <!-- $25M -->
+              <div style="font-size: 48px; background: linear-gradient(135deg, #56c49a, #7af5c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 0 20px rgba(86, 196, 154, 0.4);">
+                $25M
+              </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div style="position: absolute; top: -10px; right: 10px; font-size: 40px; opacity: 0.3;">✨</div>
+            <div style="position: absolute; bottom: 10px; left: -10px; font-size: 50px; opacity: 0.2;">👾</div>
+
+            <!-- Hover CTA -->
+            <span class="pv-terminal" style="position: absolute; bottom: 12px; right: 12px; font-size: 12px;">→ View Design</span>
+
+            <style>
+              @keyframes gradientShift {
+                0%, 100% { opacity: 0.5; }
+                50% { opacity: 1; }
+              }
+            </style>
           </div>
         </a>
       </div>
