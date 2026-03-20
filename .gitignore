@@ -17,7 +17,10 @@ Trove visuals/
 00-Archive/
 02-Profile-Visuals/
 05-Media/
-# Allow portfolio assets (explicit exceptions for mp4 override)
+# Allow portfolio assets (explicit exceptions override ignore rules)
 !03-Projects/Portfolio-Website/assets/
 !03-Projects/Portfolio-Website/assets/bg_cinematic.mp4
 !03-Projects/Portfolio-Website/assets/Prophet.mp4
+!03-Projects/Portfolio-Website/assets/PRJX_30B_Trading_Volume.png
+!03-Projects/Portfolio-Website/assets/PRJX_25M_LP_Earnings.png
+!03-Projects/Portfolio-Website/assets/saulo_profile.jpg
