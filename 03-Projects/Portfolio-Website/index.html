@@ -1653,6 +1653,77 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ═══ TERMINAL ANIMATIONS ═══ */
+    .term-window {
+      background: #0d1117;
+      border-radius: 10px;
+      padding: 14px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      line-height: 1.6;
+      color: #c9d1d9;
+      overflow: hidden;
+      height: 100%;
+      min-height: 160px;
+      position: relative;
+    }
+    .term-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .term-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .term-dot.r { background: #ff5f57; }
+    .term-dot.y { background: #febc2e; }
+    .term-dot.g { background: #28c840; }
+    .term-title {
+      color: #555;
+      font-size: 10px;
+      margin-left: 6px;
+    }
+    .term-line {
+      display: block;
+      opacity: 0;
+      white-space: pre;
+      overflow: hidden;
+    }
+    .term-line.show { opacity: 1; }
+    .t-green  { color: #3fb950; }
+    .t-cyan   { color: #79c0ff; }
+    .t-yellow { color: #e3b341; }
+    .t-red    { color: #f85149; }
+    .t-purple { color: #d2a8ff; }
+    .t-dim    { color: #484f58; }
+    .t-white  { color: #e6edf3; }
+    .term-cursor {
+      display: inline-block;
+      width: 7px; height: 13px;
+      background: #3fb950;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* stagger animation via nth-child delays */
+    .term-line:nth-child(2)  { animation: fadeIn 0.1s 0.3s forwards; }
+    .term-line:nth-child(3)  { animation: fadeIn 0.1s 0.8s forwards; }
+    .term-line:nth-child(4)  { animation: fadeIn 0.1s 1.3s forwards; }
+    .term-line:nth-child(5)  { animation: fadeIn 0.1s 1.8s forwards; }
+    .term-line:nth-child(6)  { animation: fadeIn 0.1s 2.3s forwards; }
+    .term-line:nth-child(7)  { animation: fadeIn 0.1s 2.8s forwards; }
+    .term-line:nth-child(8)  { animation: fadeIn 0.1s 3.3s forwards; }
+    .term-line:nth-child(9)  { animation: fadeIn 0.1s 3.8s forwards; }
+    .term-line:nth-child(10) { animation: fadeIn 0.1s 4.3s forwards; }
+    .term-line:nth-child(11) { animation: fadeIn 0.1s 4.8s forwards; }
+    .term-line:nth-child(12) { animation: fadeIn 0.1s 5.3s forwards; }
+    .term-line:nth-child(13) { animation: fadeIn 0.1s 5.8s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
   </style>
 </head>
 
@@ -1796,9 +1867,24 @@
                 <span class="tag">Python</span><span class="tag">Polymarket API</span><span class="tag">Backtesting</span><span class="tag">Next.js</span>
               </div>
             </div>
-            <div class="project-visual pv-1" style="background:linear-gradient(135deg,rgba(255,180,40,.2),rgba(255,140,20,.1));margin-top:auto;">
-              <span class="pv-label">PS</span><span class="pv-terminal">strategies.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">prophet-strategies — backtest</span>
+      </div>
+      <span class="term-line t-dim">$ python -m backtest.grid_runner --strategy stink_bid</span>
+      <span class="term-line t-cyan">Grid search: {entry: 6, exit: 10} | workers=8</span>
+      <span class="term-line t-yellow">Running 60 combinations...</span>
+      <span class="term-line">Batch 1/8  <span class="t-green">████████</span>  8 jobs done</span>
+      <span class="term-line">Batch 4/8  <span class="t-green">████████████████</span>  32 done</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>Best config (Stink Bid):</b></span>
+      <span class="term-line">  entry_price:  <span class="t-cyan">0.03¢</span></span>
+      <span class="term-line">  exit:         <span class="t-cyan">sell_at_25x</span></span>
+      <span class="term-line">  ROI:          <span class="t-green">+2847%</span>  win_rate: 4.2%</span>
+      <span class="term-line">  trades:       <span class="t-yellow">1,204</span></span>
+      <span class="term-cursor"></span>
+    </div></div>
           </a>
         </div>
         <div class="card-half">
@@ -1812,9 +1898,23 @@
                 <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
               </div>
             </div>
-            <div class="project-visual pv-3" style="margin-top:auto;">
-              <span class="pv-label">FR</span><span class="pv-terminal">funding-rates.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">funding-radar — live rates</span>
+      </div>
+      <span class="term-line t-dim">$ python -m engine.collector --live</span>
+      <span class="term-line t-green">✅ Connected to Hyperliquid WS</span>
+      <span class="term-line t-green">✅ Connected to Aster API</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>Funding Rates  14:32:07 UTC</b></span>
+      <span class="term-line">  BTC   <span class="t-green">+0.0102%</span>  <span class="t-cyan">LONG  ↑</span></span>
+      <span class="term-line">  ETH   <span class="t-green">+0.0089%</span>  <span class="t-cyan">LONG  ↑</span></span>
+      <span class="term-line">  SOL   <span class="t-red">-0.0034%</span>  <span class="t-yellow">SHORT ↓</span></span>
+      <span class="term-line">  HYPE  <span class="t-green">+0.0211%</span>  <span class="t-cyan">LONG  ↑</span> 🔥</span>
+      <span class="term-line t-yellow">⚡ Signal: HYPE funding anomaly +3.2σ</span>
+      <span class="term-cursor"></span>
+    </div></div>
           </a>
         </div>
 
@@ -1830,9 +1930,23 @@
                 <span class="tag">TypeScript</span><span class="tag">Helius API</span><span class="tag">Telegram</span><span class="tag">On-Chain</span>
               </div>
             </div>
-            <div class="project-visual pv-3" style="background:linear-gradient(135deg,rgba(200,100,255,.2),rgba(150,80,255,.1));margin-top:auto;">
-              <span class="pv-label">AP</span><span class="pv-terminal">analytics.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">apex-predator — /funded</span>
+      </div>
+      <span class="term-line t-dim">$ /funded 7xKp...3nQv</span>
+      <span class="term-line t-yellow">💰 Analyzing wallet funding sources...</span>
+      <span class="term-line t-white"><b>💰 Wallet Funding Analysis</b></span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-cyan">🏦 Funder:  Bx9K...mWp2 (Binance hot)</span>
+      <span class="term-line">   Amount: <span class="t-green">+14.2 SOL</span>  2d ago</span>
+      <span class="term-line t-cyan">🏦 Funder:  3xFp...kLn9</span>
+      <span class="term-line">   Amount: <span class="t-green">+2.8 SOL</span>   5d ago</span>
+      <span class="term-line t-red">⚠️ 3 holders funded by same wallet</span>
+      <span class="term-line t-yellow">   → possible coordination detected</span>
+      <span class="term-cursor"></span>
+    </div></div>
           </a>
         </div>
         <div class="card-half">
@@ -1846,9 +1960,24 @@
                 <span class="tag">Solana</span><span class="tag">Forensics</span><span class="tag">Helius API</span><span class="tag">Dune SQL</span>
               </div>
             </div>
-            <div class="project-visual pv-4" style="margin-top:auto;">
-              <span class="pv-label">SZ</span><span class="pv-terminal">forensic-trace.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">solarized — trace wallet</span>
+      </div>
+      <span class="term-line t-dim">$ python trace.py --wallet 9xBp...kL3n --depth 4</span>
+      <span class="term-line t-cyan">🔍 Tracing fund flows (depth=4)...</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line"><span class="t-green">→</span> 9xBp...kL3n  <span class="t-yellow">820 SOL</span></span>
+      <span class="term-line">   <span class="t-green">→</span> Bx7K...mW9p  <span class="t-yellow">410 SOL</span>  Binance</span>
+      <span class="term-line">   <span class="t-green">→</span> 3xFp...nQ2v  <span class="t-yellow">210 SOL</span></span>
+      <span class="term-line">      <span class="t-green">→</span> 7mLp...kR4x  <span class="t-yellow">105 SOL</span></span>
+      <span class="term-line">         <span class="t-green">→</span> <span class="t-red">KNOWN CABAL</span> wallet 🚨</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-red">⚠️  Cabal connection detected (hop 4)</span>
+      <span class="term-line t-yellow">   Confidence: 94%</span>
+      <span class="term-cursor"></span>
+    </div></div>
           </a>
         </div>
 
@@ -1918,9 +2047,24 @@
                 <span class="tag">Node.js</span><span class="tag">HFT</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
               </div>
             </div>
-            <div class="project-visual pv-7" style="margin-top:auto;">
-              <span class="pv-label">FS</span><span class="pv-terminal">entry-signals.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">fomo-sniper — entry signals</span>
+      </div>
+      <span class="term-line t-dim">$ node dist/index.js --pool uniswap-v3-base</span>
+      <span class="term-line t-green">✅ RPC connected  (Alchemy Base)</span>
+      <span class="term-line t-green">✅ Monitoring 847 pools</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-yellow">⚡ SIGNAL  14:18:03.421</span>
+      <span class="term-line">   Pool:   <span class="t-cyan">WETH/USDC 0.05%</span></span>
+      <span class="term-line">   Volume: <span class="t-green">+847%</span> vs 5m avg</span>
+      <span class="term-line">   Δ Price: <span class="t-green">+2.3%</span> in 18s</span>
+      <span class="term-line t-yellow">📤 Submitting via EntryPoint...</span>
+      <span class="term-line t-green">✅ Filled 0.5 ETH @ 2847.21</span>
+      <span class="term-line">   tx: 0x3f9b...c4a1  gas: 81,432</span>
+      <span class="term-cursor"></span>
+    </div></div>
           </a>
         </div>
         <div class="card-half">
@@ -1934,9 +2078,24 @@
                 <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Web Scraping</span><span class="tag">Telegram Bot</span>
               </div>
             </div>
-            <div class="project-visual pv-4" style="background:linear-gradient(135deg,rgba(255,180,60,.2),rgba(255,140,40,.15));margin-top:auto;">
-              <span class="pv-label">IZA</span><span class="pv-terminal">brand-intelligence.log</span>
-            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">iza-suite — /status</span>
+      </div>
+      <span class="term-line t-dim">$ /status</span>
+      <span class="term-line t-white"><b>📊 IZA DUBAI Intelligence Suite</b></span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line"><span class="t-green">✅</span> DB:        <span class="t-cyan">moda_dubai.db</span></span>
+      <span class="term-line">   Trends:   <span class="t-yellow">247 entries</span></span>
+      <span class="term-line">   Last run:  <span class="t-green">hace 2h</span></span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>Top trends today:</b></span>
+      <span class="term-line">  1. <span class="t-cyan">athleisure-luxe Dubai</span>  92pts</span>
+      <span class="term-line">  2. <span class="t-cyan">modest fashion abaya</span>   88pts</span>
+      <span class="term-line">  3. <span class="t-cyan">linen summer sets</span>      71pts</span>
+      <span class="term-cursor"></span>
+    </div></div>
           </div>
         </div>
 
