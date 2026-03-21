@@ -1656,17 +1656,22 @@
 
     /* ═══ TERMINAL ANIMATIONS ═══ */
     .term-window {
-      background: #0d1117;
-      border-radius: 10px;
+      background: rgba(10, 12, 16, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 14px;
       padding: 14px;
       font-family: 'Space Mono', monospace;
       font-size: 11px;
       line-height: 1.6;
       color: #c9d1d9;
       overflow: hidden;
+      width: 100%;
       height: 100%;
       min-height: 160px;
       position: relative;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-sizing: border-box;
     }
     .term-bar {
       display: flex;
@@ -1867,7 +1872,7 @@
                 <span class="tag">Python</span><span class="tag">Polymarket API</span><span class="tag">Backtesting</span><span class="tag">Next.js</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">prophet-strategies — backtest</span>
@@ -1898,7 +1903,7 @@
                 <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">funding-radar — live rates</span>
@@ -1930,7 +1935,7 @@
                 <span class="tag">TypeScript</span><span class="tag">Helius API</span><span class="tag">Telegram</span><span class="tag">On-Chain</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">apex-predator — /funded</span>
@@ -1960,7 +1965,7 @@
                 <span class="tag">Solana</span><span class="tag">Forensics</span><span class="tag">Helius API</span><span class="tag">Dune SQL</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">solarized — trace wallet</span>
@@ -2047,7 +2052,7 @@
                 <span class="tag">Node.js</span><span class="tag">HFT</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">fomo-sniper — entry signals</span>
@@ -2078,7 +2083,7 @@
                 <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Web Scraping</span><span class="tag">Telegram Bot</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;"><div class="term-window">
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
       <div class="term-bar">
         <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
         <span class="term-title">iza-suite — /status</span>
