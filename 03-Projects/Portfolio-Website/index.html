@@ -529,18 +529,31 @@
 
     /* ═══════════ PROJECTS ═══════════ */
     .projects-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
-
-    .project-card {
-      padding: 36px;
+    .card-full    { grid-column: span 4; }
+    .card-half    { grid-column: span 2; }
+    .card-quarter { grid-column: span 1; }
+    .card-full .project-card-inner {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
       gap: 32px;
       align-items: start;
     }
+    .project-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .card-quarter .project-visual { display: none; }
+    .card-quarter .project-card { padding: 22px; }
+    .card-quarter h3 { font-size: 18px !important; }
+    .card-quarter .project-desc { font-size: 13px; opacity: 0.75; }
 
     .project-meta {
       display: flex;
@@ -1255,9 +1268,9 @@
         padding: 0 24px;
       }
 
-      .project-card {
-        grid-template-columns: 1fr;
-      }
+      .card-full, .card-half, .card-quarter { grid-column: span 4; }
+      .project-card { padding: 20px; }
+      .card-full .project-card-inner { grid-template-columns: 1fr; }
 
       .tools-grid {
         grid-template-columns: 1fr 1fr;
@@ -1747,300 +1760,228 @@
       <h2 class="section-title reveal">What I Built 🛠️</h2>
 
       <div class="projects-grid">
-        <!-- ProphetLabs -->
-        <a href="https://prophetlabs.vercel.app/" target="_blank"
-          class="glass project-card project-card-link glass-green reveal">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>ProphetLabs <span style="font-size: 14px; opacity: 0.5; font-family: 'Space Mono', monospace;">↗</span>
-            </h3>
-            <div class="project-type">Prediction Market Arbitrage Engine</div>
-            <p class="project-desc">Real-time arbitrage detection: Polymarket ↔ Opinion Labs ↔ Kalshi ↔ Predict.
-              Features WebSocket price streaming and a three-pass matching engine with LLM validation.</p>
-            <div class="project-tech">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">WebSocket</span>
-              <span class="tag">LLM</span>
-            </div>
-          </div>
-          <div class="project-preview">
-            <!-- Video preview component -->
-            <video class="preview-video" poster="prophet_preview.png" autoplay muted loop playsinline>
-              <source src="assets/Prophet.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="hover-overlay">
-              <span>View Live Case Study</span>
-            </div>
-          </div>
-        </a>
 
-        <!-- Funding Radar -->
+        <!-- FEATURED -->
+        <div class="card-full">
+          <a href="https://prophetlabs.vercel.app/" target="_blank" class="glass project-card project-card-link glass-green reveal">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-status status-deployed">Live</span>
+                <h3>ProphetLabs <span style="font-size:14px;opacity:0.5;font-family:'Space Mono',monospace;">&#8599;</span></h3>
+                <div class="project-type">Prediction Market Arbitrage Engine</div>
+                <p class="project-desc">Real-time arbitrage detection: Polymarket &#8596; Opinion Labs &#8596; Kalshi &#8596; Predict. WebSocket price streaming and a three-pass matching engine with LLM validation.</p>
+                <div class="project-tech">
+                  <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">WebSocket</span><span class="tag">LLM</span>
+                </div>
+              </div>
+              <div class="project-preview">
+                <video class="preview-video" poster="prophet_preview.png" autoplay muted loop playsinline>
+                  <source src="assets/Prophet.mp4" type="video/mp4">
+                </video>
+                <div class="hover-overlay"><span>View Live Case Study</span></div>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <!-- ApexPredator -->
-        <a href="https://github.com/Kowalskk/ApexPredator" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>ApexPredator</h3>
-            <div class="project-type">Solana On-Chain Analytics Bot</div>
-            <p class="project-desc">Telegram bot for Solana on-chain intelligence. KOL tracking across tokens, holder portfolio analysis, bundle detection, funding origin, early buyer identification. Built to outperform Mugetsu.</p>
-            <div class="project-tech">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Telegram</span>
-              <span class="tag">Helius API</span>
-              <span class="tag">On-Chain Analytics</span>
+        <!-- HALF ROW 1 -->
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/prophet_strategies" target="_blank" class="glass project-card project-card-link glass-amber reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>Prophet Strategies</h3>
+              <div class="project-type">Polymarket Strategy Engine</div>
+              <p class="project-desc">Two-tier strategy engine: Stink Bid (extreme limit orders, 2x-150x exits) and Volatility Spread (symmetric YES/NO). Backtesting engine, portfolio dashboard, real-time execution.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Polymarket API</span><span class="tag">Backtesting</span><span class="tag">Next.js</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-3" style="background: linear-gradient(135deg, rgba(200, 100, 255, 0.2), rgba(150, 80, 255, 0.1));">
-            <span class="pv-label">AP</span>
-            <span class="pv-terminal">analytics.log</span>
-          </div>
-        </a>
+            <div class="project-visual pv-1" style="background:linear-gradient(135deg,rgba(255,180,40,.2),rgba(255,140,20,.1));margin-top:auto;">
+              <span class="pv-label">PS</span><span class="pv-terminal">strategies.log</span>
+            </div>
+          </a>
+        </div>
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/funding-radar" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>Funding Radar</h3>
+              <div class="project-type">DEX Funding Rate Aggregator</div>
+              <p class="project-desc">Aggregates perpetual futures funding rates across Hyperliquid and Aster to identify arbitrage signals. Automated data pipeline with real-time alerting.</p>
+              <div class="project-tech">
+                <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+              </div>
+            </div>
+            <div class="project-visual pv-3" style="margin-top:auto;">
+              <span class="pv-label">FR</span><span class="pv-terminal">funding-rates.log</span>
+            </div>
+          </a>
+        </div>
 
-        <!-- bonk-deploys -->
-        <a href="https://github.com/Kowalskk/bonk-deploys" target="_blank" class="glass project-card project-card-link glass-rose reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>bonk-deploys</h3>
-            <div class="project-type">Solana Ecosystem Monitor</div>
-            <p class="project-desc">Real-time monitoring of BONK ecosystem token deployments and migrations. Detects new tokens on Raydium, Orca, Meteora with dual Telegram channels for deploys and migrations. Helius webhooks powered.</p>
-            <div class="project-tech">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">Helius Webhooks</span>
-              <span class="tag">Telegram</span>
+        <!-- HALF ROW 2 -->
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/ApexPredator" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>ApexPredator</h3>
+              <div class="project-type">Solana On-Chain Analytics Bot</div>
+              <p class="project-desc">Telegram bot for Solana on-chain intelligence. KOL tracking across tokens, holder analysis, bundle detection, funding origin, early buyer identification. Built to outperform Mugetsu.</p>
+              <div class="project-tech">
+                <span class="tag">TypeScript</span><span class="tag">Helius API</span><span class="tag">Telegram</span><span class="tag">On-Chain</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-1" style="background: linear-gradient(135deg, rgba(255, 100, 150, 0.2), rgba(255, 70, 120, 0.1));">
-            <span class="pv-label">BD</span>
-            <span class="pv-terminal">monitor.log</span>
-          </div>
-        </a>
+            <div class="project-visual pv-3" style="background:linear-gradient(135deg,rgba(200,100,255,.2),rgba(150,80,255,.1));margin-top:auto;">
+              <span class="pv-label">AP</span><span class="pv-terminal">analytics.log</span>
+            </div>
+          </a>
+        </div>
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/Solarized" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>Solarized</h3>
+              <div class="project-type">Solana Forensic Tracing Engine</div>
+              <p class="project-desc">Institutional-grade wallet analysis engine. Traces complex multi-hop fund flows and provides smart money detection using Helius and Birdeye APIs.</p>
+              <div class="project-tech">
+                <span class="tag">Solana</span><span class="tag">Forensics</span><span class="tag">Helius API</span><span class="tag">Dune SQL</span>
+              </div>
+            </div>
+            <div class="project-visual pv-4" style="margin-top:auto;">
+              <span class="pv-label">SZ</span><span class="pv-terminal">forensic-trace.log</span>
+            </div>
+          </a>
+        </div>
 
-        <!-- bankr-deploys -->
-        <a href="https://github.com/Kowalskk/bankr-deploys" target="_blank" class="glass project-card project-card-link glass-cyan reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>bankr-deploys</h3>
-            <div class="project-type">Base Chain Deploy Tracker</div>
-            <p class="project-desc">Bankr Bot deployment tracker for Base chain. Monitors @bankrbot tweets, extracts contract addresses via Clanker API, enriches data with X profile metrics (followers, verified status). Real-time Telegram notifications.</p>
-            <div class="project-tech">
-              <span class="tag">Python</span>
-              <span class="tag">Clanker API</span>
-              <span class="tag">Twitter Scraper</span>
-              <span class="tag">Telegram</span>
+        <!-- QUARTER ROW -->
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk/bonk-deploys" target="_blank" class="glass project-card project-card-link glass-rose reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>bonk-deploys</h3>
+              <div class="project-type">BONK Ecosystem Monitor</div>
+              <p class="project-desc">Real-time BONK deployments and migrations across Raydium, Orca, Meteora. Dual Telegram channels. Helius webhooks.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Helius</span><span class="tag">Telegram</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-2" style="background: linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(80, 180, 255, 0.1));">
-            <span class="pv-label">BR</span>
-            <span class="pv-terminal">deploy-tracker.log</span>
-          </div>
-        </a>
-        <!-- Polymarket Strategies -->
-        <a href="https://github.com/Kowalskk/prophet_strategies" target="_blank" class="glass project-card project-card-link glass-amber reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>Prophet Strategies</h3>
-            <div class="project-type">Polymarket Strategy Engine</div>
-            <p class="project-desc">Two-tier strategy engine for Polymarket: Stink Bid (extreme limit orders for lottery upside) and Volatility Spread (symmetric positions for volatility capture). Includes backtesting, portfolio tracking, and real-time execution.</p>
-            <div class="project-tech">
-              <span class="tag">Python</span>
-              <span class="tag">Polymarket API</span>
-              <span class="tag">Real-time Signals</span>
-              <span class="tag">Trading Logic</span>
+          </a>
+        </div>
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk/bankr-deploys" target="_blank" class="glass project-card project-card-link glass-cyan reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>bankr-deploys</h3>
+              <div class="project-type">Base Chain Tracker</div>
+              <p class="project-desc">Bankr Bot tracker for Base via Clanker. Extracts contracts, enriches with X profile data.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Clanker API</span><span class="tag">Telegram</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-1" style="background: linear-gradient(135deg, rgba(255, 180, 40, 0.2), rgba(255, 140, 20, 0.1));">
-            <span class="pv-label">PM</span>
-            <span class="pv-terminal">strategies.log</span>
-          </div>
-        </a>
-        <a href="https://github.com/Kowalskk/funding-radar" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>Funding Radar</h3>
-            <div class="project-type">DEX Funding Rate Aggregator</div>
-            <p class="project-desc">Aggregates perpetual futures funding rates across Hyperliquid and Aster to identify
-              arbitrage signals. Automated data pipeline with real-time alerting system.</p>
-            <div class="project-tech">
-              <span class="tag">FastAPI</span>
-              <span class="tag">Hyperliquid</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Redis</span>
+          </a>
+        </div>
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk/telegram-mirror-bot" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>Telegram Scraper</h3>
+              <div class="project-type">Intelligence Tool</div>
+              <p class="project-desc">Real-time channel monitoring, signal extraction, token tracking for on-chain traders.</p>
+              <div class="project-tech">
+                <span class="tag">Node.js</span><span class="tag">Aiogram</span><span class="tag">Async</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-3">
-            <span class="pv-label">FR</span>
-            <span class="pv-terminal">funding-rates.log</span>
-          </div>
-        </a>
+          </a>
+        </div>
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk/trading-bots" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>X SNIPE BOT</h3>
+              <div class="project-type">Social-Data Trading Bot</div>
+              <p class="project-desc">Monitors Twitter accounts and correlates social signals with token launches on Four.Meme (BSC).</p>
+              <div class="project-tech">
+                <span class="tag">BSC</span><span class="tag">HFT</span><span class="tag">Node.js</span>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <!-- Solarized -->
-        <a href="https://github.com/Kowalskk/Solarized" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>Solarized</h3>
-            <div class="project-type">Solana Forensic Tracing Engine</div>
-            <p class="project-desc">Institutional-grade wallet analysis engine. Traces complex multi-hop fund flows and
-              provides smart money detection using Helius and Birdeye APIs.</p>
-            <div class="project-tech">
-              <span class="tag">Solana</span>
-              <span class="tag">Forensics</span>
-              <span class="tag">Helius API</span>
-              <span class="tag">Dune SQL</span>
+        <!-- HALF ROW 3 -->
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/fomo-base-sniper" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>FOMO Sniper</h3>
+              <div class="project-type">High-Frequency Entry Detection</div>
+              <p class="project-desc">Real-time FOMO entry detection on Base and BSC. Volume anomalies, liquidity shifts, price velocity. ERC-4337 execution with Telegram command &amp; control.</p>
+              <div class="project-tech">
+                <span class="tag">Node.js</span><span class="tag">HFT</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-4">
-            <span class="pv-label">SZ</span>
-            <span class="pv-terminal">forensic-trace.log</span>
-          </div>
-        </a>
-
-        <!-- Telegram Mirror Bot -->
-        <a href="https://github.com/Kowalskk/telegram-mirror-bot" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>Telegram Scraper</h3>
-            <div class="project-type">Telegram Intelligence Tool</div>
-            <p class="project-desc">Professional Telegram scraper and message mirror. High-performance
-              forwarding/copying
-              with advanced filtering algorithms and independent bot control for remote operations.</p>
-            <div class="project-tech">
-              <span class="tag">Node.js</span>
-              <span class="tag">Aiogram</span>
-              <span class="tag">Scraper</span>
-              <span class="tag">Async</span>
+            <div class="project-visual pv-7" style="margin-top:auto;">
+              <span class="pv-label">FS</span><span class="pv-terminal">entry-signals.log</span>
             </div>
-          </div>
-          <div class="project-visual pv-2"
-            style="background: linear-gradient(135deg, rgba(100, 140, 255, 0.2), rgba(160, 120, 255, 0.1));">
-            <span class="pv-label">TM</span>
-            <span class="pv-terminal">mirror-bot.log</span>
-          </div>
-        </a>
-
-        <!-- X SNIPE BOT -->
-        <a href="https://github.com/Kowalskk/trading-bots" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>X SNIPE BOT</h3>
-            <div class="project-type">Social-Data Trading Bot</div>
-            <p class="project-desc">High-performance engine designed to monitor Twitter accounts and correlate social
-              signals with new token launches on Binance Smart Chain via Four.Meme.</p>
-            <div class="project-tech">
-              <span class="tag">Twitter API</span>
-              <span class="tag">BSC</span>
-              <span class="tag">HFT</span>
-              <span class="tag">Node.js</span>
+          </a>
+        </div>
+        <div class="card-half">
+          <div class="glass project-card reveal" style="background:linear-gradient(135deg,rgba(255,200,80,.15),rgba(255,150,60,.1));border:1px solid rgba(255,180,60,.3);cursor:default;">
+            <div class="project-meta">
+              <span class="project-status" style="background:rgba(200,100,150,.4);color:#ff9999;">Entrepreneurship</span>
+              <h3>IZA DUBAI Suite</h3>
+              <div class="project-type">Fashion Brand Intelligence Platform</div>
+              <p class="project-desc">Complete ops platform for IZA DUBAI (co-founded with partner). Trend scraper, AI sentiment analysis, content generator (posts, briefs, image prompts), Telegram command center, dashboards.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Web Scraping</span><span class="tag">Telegram Bot</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-5">
-            <span class="pv-label">XB</span>
-            <span class="pv-terminal">sniping-engine.log</span>
-          </div>
-        </a>
-
-        <!-- FOMO Sniper -->
-        <a href="https://github.com/Kowalskk/fomo-base-sniper" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-deployed">Live</span>
-            <h3>FOMO Sniper</h3>
-            <div class="project-type">High-Frequency Entry Detection Engine</div>
-            <p class="project-desc">Real-time detection of FOMO entry patterns and volume anomalies. Monitors liquidity pools and price action to identify high-probability entry windows on Base and BSC.</p>
-            <div class="project-tech">
-              <span class="tag">Node.js</span>
-              <span class="tag">HFT</span>
-              <span class="tag">Base/BSC</span>
-              <span class="tag">Pool Analysis</span>
+            <div class="project-visual pv-4" style="background:linear-gradient(135deg,rgba(255,180,60,.2),rgba(255,140,40,.15));margin-top:auto;">
+              <span class="pv-label">IZA</span><span class="pv-terminal">brand-intelligence.log</span>
             </div>
-          </div>
-          <div class="project-visual pv-7">
-            <span class="pv-label">FS</span>
-            <span class="pv-terminal">entry-signals.log</span>
-          </div>
-        </a>
-
-        <!-- Meteora LP Agent -->
-        <a href="https://github.com/Kowalskk/meteora-lp-agent" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-prototype">Spec / Prototype</span>
-            <h3>Meteora LP Agent</h3>
-            <div class="project-type">Autonomous Liquidity Agent — Solana</div>
-            <p class="project-desc">Autonomous Solana liquidity agent for DLMM pools with contextual bandit learning.
-              Designed for high-efficiency yield optimization on Meteora DEX.</p>
-            <div class="project-tech">
-              <span class="tag">Solana</span>
-              <span class="tag">LinUCB</span>
-              <span class="tag">Meteora</span>
-              <span class="tag">Jito</span>
-            </div>
-          </div>
-          <div class="project-visual pv-6" style="background: #0a0a0a; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <!-- Video preview with better loading -->
-            <video preload="metadata" autoplay muted loop playsinline
-              style="width: 100%; height: 100%; object-fit: cover; display: block; background: #000;">
-              <source src="assets/Meteora.mp4" type="video/mp4">
-            </video>
-            <!-- Overlay gradient -->
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.25)); pointer-events: none;"></div>
-            <!-- Link indicator -->
-            <span class="pv-terminal" style="position: absolute; bottom: 10px; right: 12px; font-size: 11px; z-index: 11; color: #56c49a;">→ GitHub</span>
-          </div>
-        </a>
-
-        <!-- IZA DUBAI Suite -->
-        <div class="glass project-card reveal" style="background: linear-gradient(135deg, rgba(255, 200, 80, 0.15), rgba(255, 150, 60, 0.1)); border: 1px solid rgba(255, 180, 60, 0.3); cursor: default;">
-          <div class="project-meta">
-            <span class="project-status" style="background: rgba(200, 100, 150, 0.4); color: #ff9999;">Entrepreneurship</span>
-            <h3>IZA DUBAI Suite</h3>
-            <div class="project-type">Fashion Brand Intelligence Platform</div>
-            <p class="project-desc">Complete operations platform for IZA DUBAI fashion brand (co-founded with partner). Web scraping for trend analysis, AI sentiment analysis, creative content generation (Instagram posts, collection briefs, image AI prompts), Telegram command center, visual dashboards. Fully operational.</p>
-            <div class="project-tech">
-              <span class="tag">Python</span>
-              <span class="tag">Web Scraping</span>
-              <span class="tag">Claude AI</span>
-              <span class="tag">Telegram Bot</span>
-              <span class="tag">Data Viz</span>
-            </div>
-          </div>
-          <div class="project-visual pv-4" style="background: linear-gradient(135deg, rgba(255, 180, 60, 0.2), rgba(255, 140, 40, 0.15));">
-            <span class="pv-label">IZA</span>
-            <span class="pv-terminal">brand-intelligence.log</span>
           </div>
         </div>
 
-        <!-- PRJX Design Test -->
-        <a href="https://www.figma.com/design/ahwcKvcJf40T8O1Du8sNQL/PRJX-PROPOSAL?node-id=0-1&t=HuzJUF4xZCWbstdv-1" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration: none; color: inherit;">
-          <div class="project-meta">
-            <span class="project-status status-prototype">Pending Review</span>
-            <h3>PRJX — Milestone Graphics</h3>
-            <div class="project-type">Graphic Design Test · Hyperliquid DEX</div>
-            <p class="project-desc">
-              Delivered 2 milestone graphics: <strong>30B Trading Volume</strong> (minimal style with custom mascot crown)
-              and <strong>$25M Earned by LPers</strong> (new post type with LP earnings background).
-              Learned Figma, mastered their brand system, executed within their visual language.
-            </p>
-            <div class="project-tech">
-              <span class="tag">Figma</span>
-              <span class="tag">Hyperliquid</span>
-              <span class="tag">Brand Design</span>
+        <!-- HALF ROW 4: Video previews -->
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk/meteora-lp-agent" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-prototype">Spec / Prototype</span>
+              <h3>Meteora LP Agent</h3>
+              <div class="project-type">Autonomous Liquidity Agent &#8212; Solana</div>
+              <p class="project-desc">Autonomous Solana liquidity agent for DLMM pools with contextual bandit learning (LinUCB). High-efficiency yield optimization on Meteora DEX.</p>
+              <div class="project-tech">
+                <span class="tag">Solana</span><span class="tag">LinUCB</span><span class="tag">Meteora</span><span class="tag">Jito</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual pv-6" style="background: #0a0a0a; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <!-- Video preview -->
-            <video preload="metadata" autoplay muted loop playsinline
-              style="width: 100%; height: 100%; object-fit: cover; display: block; background: #000;">
-              <source src="assets/PRJX.mp4" type="video/mp4">
-            </video>
+            <div class="project-visual pv-6" style="background:#0a0a0a;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-top:auto;min-height:160px;">
+              <video preload="metadata" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="assets/Meteora.mp4" type="video/mp4">
+              </video>
+              <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,.25));pointer-events:none;"></div>
+              <span class="pv-terminal" style="position:absolute;bottom:10px;right:12px;font-size:11px;z-index:11;color:#56c49a;">&#8594; GitHub</span>
+            </div>
+          </a>
+        </div>
+        <div class="card-half">
+          <a href="https://www.figma.com/design/ahwcKvcJf40T8O1Du8sNQL/PRJX-PROPOSAL?node-id=0-1&amp;t=HuzJUF4xZCWbstdv-1" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-prototype">Pending Review</span>
+              <h3>PRJX &#8212; Milestone Graphics</h3>
+              <div class="project-type">Graphic Design &#183; Hyperliquid DEX</div>
+              <p class="project-desc">Two milestone cards for PRJX DEX (HyperEVM): 30B Trading Volume and $25M Earned by LPers. Learned Figma, mastered their brand system, executed within their visual language.</p>
+              <div class="project-tech">
+                <span class="tag">Figma</span><span class="tag">Hyperliquid</span><span class="tag">Brand Design</span>
+              </div>
+            </div>
+            <div class="project-visual pv-6" style="background:#0a0a0a;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-top:auto;min-height:160px;">
+              <video preload="metadata" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="assets/PRJX.mp4" type="video/mp4">
+              </video>
+              <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 60%,rgba(0,0,0,.3));pointer-events:none;"></div>
+              <span class="pv-terminal" style="position:absolute;bottom:10px;right:12px;font-size:11px;z-index:11;color:#56c49a;">&#8594; Figma</span>
+            </div>
+          </a>
+        </div>
 
-            <!-- Overlay gradient for edges -->
-            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.3)); pointer-events: none;"></div>
-
-            <!-- CTA -->
-            <span class="pv-terminal" style="position: absolute; bottom: 10px; right: 12px; font-size: 11px; z-index: 11; color: #56c49a;">→ Figma</span>
-          </div>
-        </a>
       </div>
     </div>
   </section>
