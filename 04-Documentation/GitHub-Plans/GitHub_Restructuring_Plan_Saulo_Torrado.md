@@ -64,7 +64,7 @@ I don't just code — I identify what's missing in the tools I use daily, and sh
 | **Funding Radar** | DEX funding rate aggregator for perpetual futures arbitrage signals | FastAPI, PostgreSQL, TimescaleDB, Redis, Docker | [→ repo](#) |
 | **Clawbot** | Autonomous Solana liquidity agent for Meteora DLMM pools with contextual bandit (LinUCB) learning | Python, Helius RPC, Jito Bundles, Meteora SDK | [→ repo](#) |
 | **On-Chain Intel Suite** | Smart money detection: Dune SQL optimization (30min → seconds), wallet tracking, holder analysis | Node.js, Dune SQL, Birdeye API, Helius API, Apps Script | [→ repo](#) |
-| **Trading Bots** | Multi-chain execution: BSC copytrading (HFT-grade), Polymarket multi-strategy, Solana wallet tracker | Node.js, Python, SQLite, Telegram Bot API | [→ repo](#) |
+| **Trading Bots** | Multi-chain execution: BSC copytrading (algorithmic), Polymarket multi-strategy, Solana wallet tracker | Node.js, Python, SQLite, Telegram Bot API | [→ repo](#) |
 
 ---
 
