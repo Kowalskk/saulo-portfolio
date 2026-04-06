@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(find /c/Users/torra/.gemini/antigravity/skills -type f -name *.yml -o -name *.yaml)"
-    ]
-  }
-}
