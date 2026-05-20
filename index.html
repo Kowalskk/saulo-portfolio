@@ -1840,7 +1840,89 @@
 
         <!-- FEATURED -->
         <div class="card-full">
-          <a href="https://prophetlabs.vercel.app/" target="_blank" class="glass project-card project-card-link glass-green reveal">
+          <a href="https://openinterest.vercel.app/markets" target="_blank" class="glass project-card project-card-link glass-green reveal">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-status status-deployed">Live</span>
+                <h3>OpenInterest <span style="font-size:14px;opacity:0.5;font-family:'Space Mono',monospace;">&#8599;</span></h3>
+                <div class="project-type">HIP-3 &amp; Perp DEX Aggregator &#183; Multi-Asset Class</div>
+                <p class="project-desc">Cross-protocol dashboard tracking 530+ markets across crypto, equities, commodities, forex, and indices. Aggregates open interest, funding rates, TWAPs, and whale flow across HIP-3 builders (Hyperliquid, tradeXYZ, Aster, Lighter, Pacifica, Felix, Paragon, and more) plus prediction markets. Built on Next.js 16 with Upstash Redis snapshot caching and a daily cron pipeline.</p>
+                <div class="project-tech">
+                  <span class="tag">Next.js 16</span><span class="tag">TypeScript</span><span class="tag">HIP-3</span><span class="tag">Upstash Redis</span><span class="tag">Tailwind v4</span>
+                </div>
+              </div>
+              <div class="project-preview">
+                <img src="assets/OpenInterest.png" alt="OpenInterest dashboard" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:14px;">
+                <div class="hover-overlay"><span>View Live Dashboard</span></div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- NEW HALF ROW 0: FreshTrace + OnchainDeck -->
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk" target="_blank" class="glass project-card project-card-link glass-green reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live · 24/7</span>
+              <h3>FreshTrace</h3>
+              <div class="project-type">Multi-Chain Freshie Detection Pipeline</div>
+              <p class="project-desc">Production pipeline detecting newly-funded EVM wallets across Ethereum and BSC. Seven live detectors: freshie, funder classification, swap scan, deploy, launch, pre-approval, ATH tracking. Powers two downstream products.</p>
+              <div class="project-tech">
+                <span class="tag">TypeScript</span><span class="tag">Postgres</span><span class="tag">Alchemy WSS</span><span class="tag">Multi-Chain</span>
+              </div>
+            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">freshtrace &#8212; live pipeline</span>
+      </div>
+      <span class="term-line t-dim">$ pm2 status freshtrace</span>
+      <span class="term-line t-green">&#10003; BlockPoller · ETH 2.5s · BSC 3s</span>
+      <span class="term-line t-green">&#10003; 7 detectors active</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>Freshie · block 21,847,392</b></span>
+      <span class="term-line">  Wallet: <span class="t-cyan">0x9aF2...3eC1</span></span>
+      <span class="term-line">  Funder: <span class="t-yellow">Binance hot wallet</span></span>
+      <span class="term-line">  Amount: <span class="t-green">0.50 ETH</span></span>
+      <span class="term-line t-red">&#9888; Cluster: 4 wallets, same funder, 12m</span>
+      <span class="term-cursor"></span>
+    </div></div>
+          </a>
+        </div>
+        <div class="card-half">
+          <a href="https://github.com/Kowalskk" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>OnchainDeck</h3>
+              <div class="project-type">Multi-Chain Wallet Tracker + Perp Signals + Bundle Feed</div>
+              <p class="project-desc">Three-module on-chain terminal. Real-time wallet tracking (ETH/BSC/Base/SOL) with custom Uniswap V2/V3/V4 and Aerodrome decoders. LLM-powered perp signal parser into dry-run positions. Filtered bundle feed.</p>
+              <div class="project-tech">
+                <span class="tag">Node.js</span><span class="tag">Alchemy · Helius WSS</span><span class="tag">Groq LLM</span><span class="tag">GeckoTerminal</span>
+              </div>
+            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">onchaindeck &#8212; live feed</span>
+      </div>
+      <span class="term-line t-dim">$ node server.js</span>
+      <span class="term-line t-green">&#10003; 47 wallets tracked · 4 chains</span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>14:18 · BUY detected</b></span>
+      <span class="term-line">  Wallet: <span class="t-cyan">cupseyy.sol</span></span>
+      <span class="term-line">  Token:  <span class="t-yellow">PUMP</span>  <span class="t-green">+847 SOL</span></span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line t-white"><b>Perp signal parsed</b></span>
+      <span class="term-line">  HYPE  <span class="t-green">LONG 5x</span>  TP: 38.2</span>
+      <span class="term-line t-yellow">&#8594; sim position opened (dry-run)</span>
+      <span class="term-cursor"></span>
+    </div></div>
+          </a>
+        </div>
+
+        <!-- SECOND FEATURED: ProphetLabs -->
+        <div class="card-full">
+          <a href="https://prophetlabs.vercel.app/" target="_blank" class="glass project-card project-card-link glass-amber reveal">
             <div class="project-card-inner">
               <div class="project-meta">
                 <span class="project-status status-deployed">Live</span>
@@ -1852,7 +1934,7 @@
                 </div>
               </div>
               <div class="project-preview">
-                <video class="preview-video" poster="prophet_preview.png" autoplay muted loop playsinline>
+                <video class="preview-video" autoplay muted loop playsinline>
                   <source src="assets/Prophet.mp4" type="video/mp4">
                 </video>
                 <div class="hover-overlay"><span>View Live Case Study</span></div>
@@ -1861,133 +1943,98 @@
           </a>
         </div>
 
-        <!-- HALF ROW 1 -->
-        <div class="card-half">
+        <!-- QUARTER ROW: demoted projects + existing quarters -->
+        <div class="card-quarter">
           <a href="https://github.com/Kowalskk/prophet_strategies" target="_blank" class="glass project-card project-card-link glass-amber reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
               <span class="project-status status-deployed">Live</span>
               <h3>Prophet Strategies</h3>
               <div class="project-type">Polymarket Strategy Engine</div>
-              <p class="project-desc">Two-tier strategy engine: Stink Bid (extreme limit orders, 2x-150x exits) and Volatility Spread (symmetric YES/NO). Backtesting engine, portfolio dashboard, real-time execution.</p>
+              <p class="project-desc">Stink Bid (extreme limit orders) + Volatility Spread (symmetric YES/NO). Backtesting, dashboard, real-time execution.</p>
               <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Polymarket API</span><span class="tag">Backtesting</span><span class="tag">Next.js</span>
+                <span class="tag">Python</span><span class="tag">Backtesting</span><span class="tag">Next.js</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">prophet-strategies — backtest</span>
-      </div>
-      <span class="term-line t-dim">$ python -m backtest.grid_runner --strategy stink_bid</span>
-      <span class="term-line t-cyan">Grid search: {entry: 6, exit: 10} | workers=8</span>
-      <span class="term-line t-yellow">Running 60 combinations...</span>
-      <span class="term-line">Batch 1/8  <span class="t-green">████████</span>  8 jobs done</span>
-      <span class="term-line">Batch 4/8  <span class="t-green">████████████████</span>  32 done</span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-white"><b>Best config (Stink Bid):</b></span>
-      <span class="term-line">  entry_price:  <span class="t-cyan">0.03¢</span></span>
-      <span class="term-line">  exit:         <span class="t-cyan">sell_at_25x</span></span>
-      <span class="term-line">  ROI:          <span class="t-green">+2847%</span>  win_rate: 4.2%</span>
-      <span class="term-line">  trades:       <span class="t-yellow">1,204</span></span>
-      <span class="term-cursor"></span>
-    </div></div>
           </a>
         </div>
-        <div class="card-half">
+        <div class="card-quarter">
           <a href="https://github.com/Kowalskk/funding-radar" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
               <span class="project-status status-deployed">Live</span>
               <h3>Funding Radar</h3>
               <div class="project-type">DEX Funding Rate Aggregator</div>
-              <p class="project-desc">Aggregates perpetual futures funding rates across Hyperliquid and Aster to identify arbitrage signals. Automated data pipeline with real-time alerting.</p>
+              <p class="project-desc">Perpetual futures funding rates across Hyperliquid and Aster. Real-time arbitrage signals.</p>
               <div class="project-tech">
-                <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+                <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">Redis</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">funding-radar — live rates</span>
-      </div>
-      <span class="term-line t-dim">$ python -m engine.collector --live</span>
-      <span class="term-line t-green">✅ Connected to Hyperliquid WS</span>
-      <span class="term-line t-green">✅ Connected to Aster API</span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-white"><b>Funding Rates  14:32:07 UTC</b></span>
-      <span class="term-line">  BTC   <span class="t-green">+0.0102%</span>  <span class="t-cyan">LONG  ↑</span></span>
-      <span class="term-line">  ETH   <span class="t-green">+0.0089%</span>  <span class="t-cyan">LONG  ↑</span></span>
-      <span class="term-line">  SOL   <span class="t-red">-0.0034%</span>  <span class="t-yellow">SHORT ↓</span></span>
-      <span class="term-line">  HYPE  <span class="t-green">+0.0211%</span>  <span class="t-cyan">LONG  ↑</span> 🔥</span>
-      <span class="term-line t-yellow">⚡ Signal: HYPE funding anomaly +3.2σ</span>
-      <span class="term-cursor"></span>
-    </div></div>
           </a>
         </div>
-
-        <!-- HALF ROW 2 -->
-        <div class="card-half">
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>LivoSniper</h3>
+              <div class="project-type">Base Meme Launch Sniper</div>
+              <p class="project-desc">Sniper for Livo on Base. Win on exit management: configurable TPs, stop-loss, time exits. Filters tax/V4 traps.</p>
+              <div class="project-tech">
+                <span class="tag">Node.js</span><span class="tag">Base</span><span class="tag">VPS</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-quarter">
           <a href="https://github.com/Kowalskk/ApexPredator" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
               <span class="project-status status-deployed">Live</span>
               <h3>ApexPredator</h3>
-              <div class="project-type">Solana On-Chain Analytics Bot</div>
-              <p class="project-desc">Telegram bot for Solana on-chain intelligence. KOL tracking across tokens, holder analysis, bundle detection, funding origin, early buyer identification. Built to outperform Mugetsu.</p>
+              <div class="project-type">Solana Analytics Bot</div>
+              <p class="project-desc">Telegram bot for Solana on-chain intel. KOL tracking, holder analysis, bundle detection, funding origin.</p>
               <div class="project-tech">
-                <span class="tag">TypeScript</span><span class="tag">Helius API</span><span class="tag">Telegram</span><span class="tag">On-Chain</span>
+                <span class="tag">TypeScript</span><span class="tag">Helius API</span><span class="tag">Telegram</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">apex-predator — /funded</span>
-      </div>
-      <span class="term-line t-dim">$ /funded 7xKp...3nQv</span>
-      <span class="term-line t-yellow">💰 Analyzing wallet funding sources...</span>
-      <span class="term-line t-white"><b>💰 Wallet Funding Analysis</b></span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-cyan">🏦 Funder:  Bx9K...mWp2 (Binance hot)</span>
-      <span class="term-line">   Amount: <span class="t-green">+14.2 SOL</span>  2d ago</span>
-      <span class="term-line t-cyan">🏦 Funder:  3xFp...kLn9</span>
-      <span class="term-line">   Amount: <span class="t-green">+2.8 SOL</span>   5d ago</span>
-      <span class="term-line t-red">⚠️ 3 holders funded by same wallet</span>
-      <span class="term-line t-yellow">   → possible coordination detected</span>
-      <span class="term-cursor"></span>
-    </div></div>
           </a>
         </div>
-        <div class="card-half">
+        <div class="card-quarter">
           <a href="https://github.com/Kowalskk/Solarized" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
               <span class="project-status status-deployed">Live</span>
               <h3>Solarized</h3>
-              <div class="project-type">Solana Forensic Tracing Engine</div>
-              <p class="project-desc">Institutional-grade wallet analysis engine. Traces complex multi-hop fund flows and provides smart money detection using Helius and Birdeye APIs.</p>
+              <div class="project-type">Solana Forensic Tracing</div>
+              <p class="project-desc">Institutional-grade wallet analysis. Multi-hop fund flow tracing, smart money detection via Helius/Birdeye.</p>
               <div class="project-tech">
-                <span class="tag">Solana</span><span class="tag">Forensics</span><span class="tag">Helius API</span><span class="tag">Dune SQL</span>
+                <span class="tag">Solana</span><span class="tag">Helius</span><span class="tag">Dune SQL</span>
               </div>
             </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">solarized — trace wallet</span>
-      </div>
-      <span class="term-line t-dim">$ python trace.py --wallet 9xBp...kL3n --depth 4</span>
-      <span class="term-line t-cyan">🔍 Tracing fund flows (depth=4)...</span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line"><span class="t-green">→</span> 9xBp...kL3n  <span class="t-yellow">820 SOL</span></span>
-      <span class="term-line">   <span class="t-green">→</span> Bx7K...mW9p  <span class="t-yellow">410 SOL</span>  Binance</span>
-      <span class="term-line">   <span class="t-green">→</span> 3xFp...nQ2v  <span class="t-yellow">210 SOL</span></span>
-      <span class="term-line">      <span class="t-green">→</span> 7mLp...kR4x  <span class="t-yellow">105 SOL</span></span>
-      <span class="term-line">         <span class="t-green">→</span> <span class="t-red">KNOWN CABAL</span> wallet 🚨</span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-red">⚠️  Cabal connection detected (hop 4)</span>
-      <span class="term-line t-yellow">   Confidence: 94%</span>
-      <span class="term-cursor"></span>
-    </div></div>
           </a>
         </div>
-
-        <!-- QUARTER ROW -->
+        <div class="card-quarter">
+          <a href="https://github.com/Kowalskk/fomo-base-sniper" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>FOMO Sniper</h3>
+              <div class="project-type">Real-Time Entry Detection</div>
+              <p class="project-desc">Volume anomalies + liquidity shifts on Base and BSC. ERC-4337 execution with Telegram control.</p>
+              <div class="project-tech">
+                <span class="tag">Node.js</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-quarter">
+          <div class="glass project-card reveal" style="background:linear-gradient(135deg,rgba(255,200,80,.15),rgba(255,150,60,.1));border:1px solid rgba(255,180,60,.3);cursor:default;">
+            <div class="project-meta">
+              <span class="project-status" style="background:rgba(200,100,150,.4);color:#ff9999;">Entrepreneurship</span>
+              <h3>IZA DUBAI Suite</h3>
+              <div class="project-type">Fashion Brand Intelligence</div>
+              <p class="project-desc">Ops platform for IZA DUBAI. Trend scraper, AI sentiment, content generator, Telegram command center.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Telegram</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card-quarter">
           <a href="https://github.com/Kowalskk/bonk-deploys" target="_blank" class="glass project-card project-card-link glass-rose reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
@@ -2041,71 +2088,7 @@
           </a>
         </div>
 
-        <!-- HALF ROW 3 -->
-        <div class="card-half">
-          <a href="https://github.com/Kowalskk/fomo-base-sniper" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>FOMO Sniper</h3>
-              <div class="project-type">Real-Time Entry Detection</div>
-              <p class="project-desc">Real-time FOMO entry detection on Base and BSC. Volume anomalies, liquidity shifts, price velocity. ERC-4337 execution with Telegram command &amp; control.</p>
-              <div class="project-tech">
-                <span class="tag">Node.js</span><span class="tag">Low-Latency</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
-              </div>
-            </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">fomo-sniper — entry signals</span>
-      </div>
-      <span class="term-line t-dim">$ node dist/index.js --pool uniswap-v3-base</span>
-      <span class="term-line t-green">✅ RPC connected  (Alchemy Base)</span>
-      <span class="term-line t-green">✅ Monitoring 847 pools</span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-yellow">⚡ SIGNAL  14:18:03.421</span>
-      <span class="term-line">   Pool:   <span class="t-cyan">WETH/USDC 0.05%</span></span>
-      <span class="term-line">   Volume: <span class="t-green">+847%</span> vs 5m avg</span>
-      <span class="term-line">   Δ Price: <span class="t-green">+2.3%</span> in 18s</span>
-      <span class="term-line t-yellow">📤 Submitting via EntryPoint...</span>
-      <span class="term-line t-green">✅ Filled 0.5 ETH @ 2847.21</span>
-      <span class="term-line">   tx: 0x3f9b...c4a1  gas: 81,432</span>
-      <span class="term-cursor"></span>
-    </div></div>
-          </a>
-        </div>
-        <div class="card-half">
-          <div class="glass project-card reveal" style="background:linear-gradient(135deg,rgba(255,200,80,.15),rgba(255,150,60,.1));border:1px solid rgba(255,180,60,.3);cursor:default;">
-            <div class="project-meta">
-              <span class="project-status" style="background:rgba(200,100,150,.4);color:#ff9999;">Entrepreneurship</span>
-              <h3>IZA DUBAI Suite</h3>
-              <div class="project-type">Fashion Brand Intelligence Platform</div>
-              <p class="project-desc">Complete ops platform for IZA DUBAI (co-founded with partner). Trend scraper, AI sentiment analysis, content generator (posts, briefs, image prompts), Telegram command center, dashboards.</p>
-              <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Web Scraping</span><span class="tag">Telegram Bot</span>
-              </div>
-            </div>
-            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
-      <div class="term-bar">
-        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-        <span class="term-title">iza-suite — /status</span>
-      </div>
-      <span class="term-line t-dim">$ /status</span>
-      <span class="term-line t-white"><b>📊 IZA DUBAI Intelligence Suite</b></span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line"><span class="t-green">✅</span> DB:        <span class="t-cyan">moda_dubai.db</span></span>
-      <span class="term-line">   Trends:   <span class="t-yellow">247 entries</span></span>
-      <span class="term-line">   Last run:  <span class="t-green">hace 2h</span></span>
-      <span class="term-line t-dim">────────────────────────────────</span>
-      <span class="term-line t-white"><b>Top trends today:</b></span>
-      <span class="term-line">  1. <span class="t-cyan">athleisure-luxe Dubai</span>  92pts</span>
-      <span class="term-line">  2. <span class="t-cyan">modest fashion abaya</span>   88pts</span>
-      <span class="term-line">  3. <span class="t-cyan">linen summer sets</span>      71pts</span>
-      <span class="term-cursor"></span>
-    </div></div>
-          </div>
-        </div>
-
-        <!-- HALF ROW 4: Video previews -->
+        <!-- HALF ROW: Video previews -->
         <div class="card-half">
           <a href="https://github.com/Kowalskk/meteora-lp-agent" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
