@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saulo — Web3 Builder</title>
+  <title>Saulo — Trading Product Builder</title>
   <link rel="icon" type="image/jpeg" href="assets/gud.jpg">
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
@@ -1768,11 +1768,12 @@
         style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
     <div class="hero-greeting">Gm, I'm</div>
     <h1 class="hero-name"><span class="shimmer">Saulo</span></h1>
-    <div class="hero-tagline">Web3 Builder · On-Chain Operator · Power User who Ships</div>
+    <div class="hero-tagline">Trading Product Builder · On-Chain Intelligence</div>
     <p class="hero-desc">
-      <strong>13 years building a real business.</strong> Now I build in crypto, deep in
-      <span class="hl">Hyperliquid</span>, <span class="hl">Polymarket</span>, and on-chain trading.
-      I'm a <span class="hl">power user who ships</span>: from idea to working prototype using AI-assisted development.
+      I build and run <span class="hl">trading products</span> for on-chain markets, deep in <span class="hl">Hyperliquid</span>, <span class="hl">Polymarket</span> and launchpad trading.
+      My main project is <span class="hl">Ktrade</span>, a web trading terminal I took from idea to live trading on my own with AI-assisted development.
+      I also do <span class="hl">on-chain intelligence</span>, tracing funds and wallets.
+      Before crypto, <strong>13 years running business development and a P&amp;L</strong>.
     </p>
 
     <div class="hero-socials">
@@ -1816,7 +1817,7 @@
         <span class="label">Years in Crypto</span>
       </div>
       <div class="stat-chip">
-        <span class="val">10+</span>
+        <span class="val">20+</span>
         <span class="label">Tools Shipped</span>
       </div>
       <div class="stat-chip">
@@ -1837,6 +1838,27 @@
       <h2 class="section-title reveal">What I Built 🛠️</h2>
 
       <div class="projects-grid">
+
+        <!-- FEATURED: Ktrade -->
+        <div class="card-full">
+          <a href="https://github.com/Kowalskk/ktrade-showcase" target="_blank" class="glass project-card project-card-link glass-green reveal">
+            <div class="project-card-inner">
+              <div class="project-meta">
+                <span class="project-status status-deployed">Live · Real trading</span>
+                <h3>Ktrade <span style="font-size:14px;opacity:0.5;font-family:'Space Mono',monospace;">&#8599;</span></h3>
+                <div class="project-type">Web Trading Terminal for Elysium (HyperEVM L2)</div>
+                <p class="project-desc">A trading terminal I designed, built and run. Market discovery with new pairs and trending tokens, token pages with charts and trades, a wallet tracker, a portfolio and a live feed that picks up website changes, listings and contract updates as they happen, each alert leading to a one-tap buy. Every order is simulated on-chain before it is sent, with spending caps, a kill switch and a closed list of venues. Rolled out in phases from paper trading to real execution. Guest demo on request.</p>
+                <div class="project-tech">
+                  <span class="tag">Product</span><span class="tag">Trading flows</span><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Elysium</span>
+                </div>
+              </div>
+              <div class="project-preview">
+                <img src="assets/ktrade_pulse.png" alt="Ktrade Pulse" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block;border-radius:14px;">
+                <div class="hover-overlay"><span>Guest demo on request</span></div>
+              </div>
+            </div>
+          </a>
+        </div>
 
         <!-- FEATURED -->
         <div class="card-full">
@@ -1863,10 +1885,10 @@
         <div class="card-half">
           <a href="https://github.com/Kowalskk" target="_blank" class="glass project-card project-card-link glass-green reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
-              <span class="project-status" style="background:rgba(180,140,220,.4);color:#d9c2f0;">&#128274; Private &#183; Showcase coming</span>
+              <span class="project-status" style="background:rgba(180,140,220,.4);color:#d9c2f0;">&#128274; Built &#183; Private</span>
               <h3>FreshTrace</h3>
               <div class="project-type">Multi-Chain Freshie Detection Pipeline</div>
-              <p class="project-desc">Production pipeline detecting newly-funded EVM wallets across Ethereum and BSC. Seven live detectors: freshie, funder classification, swap scan, deploy, launch, pre-approval, ATH tracking. Powers two downstream products.</p>
+              <p class="project-desc">Pipeline that detected newly-funded EVM wallets on Ethereum and BSC, with seven detectors: freshie, funder classification, swap scan, deploy, launch, pre-approval and ATH tracking. It fed two alert products.</p>
               <div class="project-tech">
                 <span class="tag">TypeScript</span><span class="tag">Postgres</span><span class="tag">Alchemy WSS</span><span class="tag">Multi-Chain</span>
               </div>
@@ -1892,7 +1914,7 @@
         <div class="card-half">
           <a href="https://github.com/Kowalskk" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
-              <span class="project-status" style="background:rgba(180,140,220,.4);color:#d9c2f0;">&#128274; Private &#183; Showcase coming</span>
+              <span class="project-status" style="background:rgba(180,140,220,.4);color:#d9c2f0;">&#128274; Built &#183; Private</span>
               <h3>OnchainDeck</h3>
               <div class="project-type">Multi-Chain Wallet Tracker + Perp Signals + Bundle Feed</div>
               <p class="project-desc">Three-module on-chain terminal. Real-time wallet tracking (ETH/BSC/Base/SOL) with custom Uniswap V2/V3/V4 and Aerodrome decoders. LLM-powered perp signal parser into dry-run positions. Filtered bundle feed.</p>
@@ -1943,7 +1965,33 @@
           </a>
         </div>
 
-        <!-- QUARTER ROW: demoted projects + existing quarters -->
+        <!-- QUARTER ROW -->
+        <div class="card-quarter">
+          <div class="glass project-card reveal">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>Elysium Trading Bot</h3>
+              <div class="project-type">Telegram Trading Bot</div>
+              <p class="project-desc">Trade Elysium from Telegram. Multi-user mode with a 1% fee and a referral share for whoever invited the user.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Telegram</span><span class="tag">Referrals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-quarter">
+          <div class="glass project-card reveal">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live 24/7</span>
+              <h3>Alert Feeds</h3>
+              <div class="project-type">Telegram Alerts for Traders</div>
+              <p class="project-desc">New launches, exchange listings, token unlocks and coordinated wallet activity, read by trader groups.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Multi-Chain</span><span class="tag">Telegram</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card-quarter">
           <a href="https://github.com/Kowalskk/prophet_strategies" target="_blank" class="glass project-card project-card-link glass-amber reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
@@ -2002,106 +2050,21 @@
               <span class="project-status status-deployed">Live</span>
               <h3>Solarized</h3>
               <div class="project-type">Solana Forensic Tracing</div>
-              <p class="project-desc">Institutional-grade wallet analysis. Multi-hop fund flow tracing, smart money detection via Helius/Birdeye.</p>
+              <p class="project-desc">Solana wallet analysis. Multi-hop fund flow tracing and smart money detection via Helius and Birdeye.</p>
               <div class="project-tech">
                 <span class="tag">Solana</span><span class="tag">Helius</span><span class="tag">Dune SQL</span>
               </div>
             </div>
           </a>
         </div>
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/fomo-base-sniper" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>FOMO Sniper</h3>
-              <div class="project-type">Real-Time Entry Detection</div>
-              <p class="project-desc">Volume anomalies + liquidity shifts on Base and BSC. ERC-4337 execution with Telegram control.</p>
-              <div class="project-tech">
-                <span class="tag">Node.js</span><span class="tag">Base/BSC</span><span class="tag">ERC-4337</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="card-quarter">
-          <div class="glass project-card reveal" style="background:linear-gradient(135deg,rgba(255,200,80,.15),rgba(255,150,60,.1));border:1px solid rgba(255,180,60,.3);cursor:default;">
-            <div class="project-meta">
-              <span class="project-status" style="background:rgba(200,100,150,.4);color:#ff9999;">Entrepreneurship</span>
-              <h3>IZA DUBAI Suite</h3>
-              <div class="project-type">Fashion Brand Intelligence</div>
-              <p class="project-desc">Ops platform for IZA DUBAI. Trend scraper, AI sentiment, content generator, Telegram command center.</p>
-              <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Claude AI</span><span class="tag">Telegram</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/bonk-deploys" target="_blank" class="glass project-card project-card-link glass-rose reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>bonk-deploys</h3>
-              <div class="project-type">BONK Ecosystem Monitor</div>
-              <p class="project-desc">Real-time BONK deployments and migrations across Raydium, Orca, Meteora. Dual Telegram channels. Helius webhooks.</p>
-              <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Helius</span><span class="tag">Telegram</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/bankr-deploys" target="_blank" class="glass project-card project-card-link glass-cyan reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>bankr-deploys</h3>
-              <div class="project-type">Base Chain Tracker</div>
-              <p class="project-desc">Bankr Bot tracker for Base via Clanker. Extracts contracts, enriches with X profile data.</p>
-              <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Clanker API</span><span class="tag">Telegram</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/telegram-mirror-bot" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>Telegram Scraper</h3>
-              <div class="project-type">Intelligence Tool</div>
-              <p class="project-desc">Real-time channel monitoring, signal extraction, token tracking for on-chain traders.</p>
-              <div class="project-tech">
-                <span class="tag">Node.js</span><span class="tag">Aiogram</span><span class="tag">Async</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/trading-bots" target="_blank" class="glass project-card project-card-link reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
-              <h3>X SNIPE BOT</h3>
-              <div class="project-type">Social-Data Trading Bot</div>
-              <p class="project-desc">Monitors Twitter accounts and correlates social signals with token launches on Four.Meme (BSC).</p>
-              <div class="project-tech">
-                <span class="tag">BSC</span><span class="tag">Automation</span><span class="tag">Node.js</span>
-              </div>
-            </div>
-          </a>
-        </div>
+        
+        
+        
+        
+        
 
         <!-- Meteora LP Agent demoted to quarter -->
-        <div class="card-quarter">
-          <a href="https://github.com/Kowalskk/meteora-lp-agent" target="_blank" class="glass project-card project-card-link glass-purple reveal" style="text-decoration:none;color:inherit;">
-            <div class="project-meta">
-              <span class="project-status status-prototype">Spec / Prototype</span>
-              <h3>Meteora LP Agent</h3>
-              <div class="project-type">Autonomous Liquidity Agent &#8212; Solana</div>
-              <p class="project-desc">Solana liquidity agent for DLMM pools with contextual bandit learning (LinUCB). Yield optimization on Meteora.</p>
-              <div class="project-tech">
-                <span class="tag">Solana</span><span class="tag">LinUCB</span><span class="tag">Meteora</span>
-              </div>
-            </div>
-          </a>
-        </div>
+        
 
         <!-- PRJX promoted to card-full at the very bottom -->
         <div class="card-full">
@@ -2146,10 +2109,10 @@
           <div class="glass about-block" style="padding: 32px;">
             <span class="about-header-muted">I'M CURRENTLY...</span>
             <ul class="about-bullet-list">
-              <li>building execution tools for Hyperliquid and Polymarket: arbitrage, funding rate signals, prediction market strategies</li>
+              <li>running and extending Ktrade, a trading terminal for Elysium: market discovery, wallet tracking and live execution</li>
               <li>deep in on-chain: cabal detection, smart money tracking, bundle analysis across EVM and Solana</li>
               <li>building automated trading infrastructure and algorithmic execution as a power user</li>
-              <li>shipping prototypes in record time and looking for the right team</li>
+              <li>looking for a product role on a trading team</li>
             </ul>
           </div>
 
@@ -2200,7 +2163,14 @@
             <div class="tl-year">2025</div>
             <div class="tl-body">
               <h4>Builder Phase</h4>
-              <p>Full-time shipping tools. 10+ systems deployed. Looking for the right team.</p>
+              <p>Full-time shipping tools: dashboards, trackers, bots and alert feeds.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2026</div>
+            <div class="tl-body">
+              <h4>Ktrade</h4>
+              <p>Built a trading terminal for Elysium and took it to live trading. My on-chain intelligence work feeds its bundle tools.</p>
             </div>
           </div>
         </div>
@@ -2294,10 +2264,10 @@
       <div class="exp-grid">
         <div class="glass exp-card glass-green reveal">
           <div class="exp-period">2024 — Present (Full-time) · 2017 — 2024 (Active)</div>
-          <h3>Web3 Builder & Onchainer</h3>
+          <h3>Trading Product Builder & On-Chain Trader</h3>
           <div class="exp-company">Independent</div>
           <div class="exp-location">Dubai, UAE (Remote)</div>
-          <p class="exp-desc">On-chain intelligence specialist building automated execution systems grounded in signal analysis. Wallet tracking, smart money detection, bundle analysis, and cabal tracking across Solana, Ethereum, and Hyperliquid. 10+ production tools from signal detection to low-latency execution. Dune Analytics practitioner.</p>
+          <p class="exp-desc">I build and run trading products for on-chain markets. My main project is Ktrade, a web trading terminal for Elysium that I took to live trading on my own. Before that came wallet tracking, smart money detection and bundle analysis across Solana, Ethereum and Hyperliquid, with 20+ tools shipped. Dune Analytics practitioner.</p>
           <div class="exp-tags">
             <span class="tag">On-Chain Intelligence</span>
             <span class="tag">Solana</span>
@@ -2410,7 +2380,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>Built by Saulo · 2025</footer>
+  <footer>Built by Saulo · 2026</footer>
 
   <script>
 
