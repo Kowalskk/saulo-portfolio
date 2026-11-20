@@ -1771,7 +1771,7 @@
     <div class="hero-tagline">Trading Product Builder · On-Chain Intelligence</div>
     <p class="hero-desc">
       I build and run <span class="hl">trading products</span> for on-chain markets, deep in <span class="hl">Hyperliquid</span>, <span class="hl">Polymarket</span> and launchpad trading.
-      My main project is <span class="hl">Ktrade</span>, a web trading terminal I took from idea to live trading on my own with AI-assisted development.
+      My main project is <span class="hl">Ktrade</span>, a web trading terminal I took from idea to live trading on my own: market discovery, signals, wallet tracking and one-tap execution.
       I also do <span class="hl">on-chain intelligence</span>, tracing funds and wallets.
       Before crypto, <strong>13 years running business development and a P&amp;L</strong>.
     </p>
@@ -1804,6 +1804,13 @@
           <path d="M22 6l-10 7L2 6" />
         </svg>
         Email
+      </a>
+      <a href="assets/Saulo_Torrado_CV.pdf" target="_blank" class="social-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <path d="M14 2v6h6M8 13h8M8 17h6" />
+        </svg>
+        CV
       </a>
     </div>
 
@@ -1846,10 +1853,10 @@
               <div class="project-meta">
                 <span class="project-status status-deployed">Live · Real trading</span>
                 <h3>Ktrade <span style="font-size:14px;opacity:0.5;font-family:'Space Mono',monospace;">&#8599;</span></h3>
-                <div class="project-type">Web Trading Terminal for Elysium (HyperEVM L2)</div>
-                <p class="project-desc">A trading terminal I designed, built and run. Market discovery with new pairs and trending tokens, token pages with charts and trades, a wallet tracker, a portfolio and a live feed that picks up website changes, listings and contract updates as they happen, each alert leading to a one-tap buy. Every order is simulated on-chain before it is sent, with spending caps, a kill switch and a closed list of venues. Rolled out in phases from paper trading to real execution. Guest demo on request.</p>
+                <div class="project-type">Multichain Web Trading Terminal</div>
+                <p class="project-desc">Ktrade started as a tool to act on an edge built over time: seeing new chains, wallets and launches early. It grew out of separate tools developed over months, all sharing one hub for data and wallet labels. The terminal has market discovery, token pages with charts and trades, a portfolio and a live alert feed fed by watchers on websites, exchange listings, X accounts and contract changes. Custom tools include bundle detection with a wallet graph per token, an X tracker and a live wallet tracker. Every order is simulated on-chain before it is sent, with spending caps, a kill switch and a closed list of venues. Guest demo on request.</p>
                 <div class="project-tech">
-                  <span class="tag">Product</span><span class="tag">Trading flows</span><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Elysium</span>
+                  <span class="tag">Product</span><span class="tag">Trading flows</span><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Bundle graph</span><span class="tag">X tracker</span>
                 </div>
               </div>
               <div class="project-preview">
@@ -1879,6 +1886,50 @@
               </div>
             </div>
           </a>
+        </div>
+
+        <!-- KNTQ Dashboard + On-Chain Intelligence -->
+        <div class="card-half">
+          <div class="glass project-card glass-green reveal">
+            <div class="project-meta">
+              <span class="project-status status-prototype">In development</span>
+              <h3>KNTQ Dashboard</h3>
+              <div class="project-type">Token Buybacks, Burns and Supply</div>
+              <p class="project-desc">Tracks where KNTQ is bought back, what gets burned and what adds to supply, from on-chain data and public APIs. Flow charts by source, a ranking of contributors and a view of what is scheduled to reach the market.</p>
+              <div class="project-tech">
+                <span class="tag">Data</span><span class="tag">D3 charts</span><span class="tag">On-chain data</span><span class="tag">Python</span>
+              </div>
+            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><img src="assets/kntq_dashboard.png" alt="KNTQ dashboard: buyback flows" style="width:100%;display:block;border-radius:14px;"></div>
+          </div>
+        </div>
+        <div class="card-half">
+          <div class="glass project-card glass-purple reveal">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live</span>
+              <h3>On-Chain Intelligence</h3>
+              <div class="project-type">Fund Tracing and Wallet Attribution</div>
+              <p class="project-desc">Tools that trace exchange deposits to the fresh wallets receiving the payout and group coordinated wallets by funder and timing. Each attribution gets a score from 0 to 100, and the output is a case report that separates proof from inference.</p>
+              <div class="project-tech">
+                <span class="tag">Tracing</span><span class="tag">Wallet labels</span><span class="tag">Case reports</span><span class="tag">Multi-Chain</span>
+              </div>
+            </div>
+            <div class="project-visual" style="margin-top:auto;padding:0;border-radius:14px;overflow:hidden;"><div class="term-window">
+      <div class="term-bar">
+        <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+        <span class="term-title">case report &#8212; anonymized</span>
+      </div>
+      <span class="term-line t-white"><b>Deposit attribution</b></span>
+      <span class="term-line t-dim">────────────────────────────────</span>
+      <span class="term-line">  Deposit swept to hot wallet in <span class="t-yellow">~74 s</span></span>
+      <span class="term-line">  Hot-wallet txs scanned: <span class="t-cyan">1,353</span></span>
+      <span class="term-line">  Payout to fresh wallet, gap <span class="t-green">0.24%</span></span>
+      <span class="term-line t-green">&#10003; Unique match in window</span>
+      <span class="term-line t-dim">  Proof: handoff back to public wallet</span>
+      <span class="term-line t-dim">  Inference: deposit &#8596; payout link</span>
+      <span class="term-cursor"></span>
+    </div></div>
+          </div>
         </div>
 
         <!-- NEW HALF ROW 0: FreshTrace + OnchainDeck -->
@@ -1947,7 +1998,7 @@
           <a href="https://prophetlabs.vercel.app/" target="_blank" class="glass project-card project-card-link glass-amber reveal">
             <div class="project-card-inner">
               <div class="project-meta">
-                <span class="project-status status-deployed">Live</span>
+                <span class="project-status status-prototype">Paused</span>
                 <h3>ProphetLabs <span style="font-size:14px;opacity:0.5;font-family:'Space Mono',monospace;">&#8599;</span></h3>
                 <div class="project-type">Prediction Market Arbitrage Engine</div>
                 <p class="project-desc">Real-time arbitrage detection: Polymarket &#8596; Opinion Labs &#8596; Kalshi &#8596; Predict. WebSocket price streaming and a three-pass matching engine with LLM validation.</p>
@@ -1970,11 +2021,24 @@
           <div class="glass project-card reveal">
             <div class="project-meta">
               <span class="project-status status-deployed">Live</span>
-              <h3>Elysium Trading Bot</h3>
-              <div class="project-type">Telegram Trading Bot</div>
-              <p class="project-desc">Trade Elysium from Telegram. Multi-user mode with a 1% fee and a referral share for whoever invited the user.</p>
+              <h3>Trading Bot</h3>
+              <div class="project-type">Multichain Telegram Trading Bot</div>
+              <p class="project-desc">Trades early markets and new venues from Telegram, with a multi-user mode.</p>
               <div class="project-tech">
-                <span class="tag">Python</span><span class="tag">Telegram</span><span class="tag">Referrals</span>
+                <span class="tag">Python</span><span class="tag">Telegram</span><span class="tag">Multichain</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-quarter">
+          <div class="glass project-card reveal">
+            <div class="project-meta">
+              <span class="project-status status-deployed">Live 24/7</span>
+              <h3>Watch Hub</h3>
+              <div class="project-type">Watchers for Early Signals</div>
+              <p class="project-desc">Watches exchange listings, launchpads, contract changes, websites and X accounts, and feeds the alerts and the Ktrade feed.</p>
+              <div class="project-tech">
+                <span class="tag">Python</span><span class="tag">Multi-Chain</span><span class="tag">24/7</span>
               </div>
             </div>
           </div>
@@ -2008,10 +2072,10 @@
         <div class="card-quarter">
           <a href="https://github.com/Kowalskk/funding-radar" target="_blank" class="glass project-card project-card-link glass-blue reveal" style="text-decoration:none;color:inherit;">
             <div class="project-meta">
-              <span class="project-status status-deployed">Live</span>
+              <span class="project-status status-prototype">In development</span>
               <h3>Funding Radar</h3>
-              <div class="project-type">DEX Funding Rate Aggregator</div>
-              <p class="project-desc">Perpetual futures funding rates across Hyperliquid and Aster. Real-time arbitrage signals.</p>
+              <div class="project-type">Funding Monitor and Hedged Farming</div>
+              <p class="project-desc">Funding monitor across 12 perp exchanges, plus an executor for hedged airdrop farming.</p>
               <div class="project-tech">
                 <span class="tag">FastAPI</span><span class="tag">Hyperliquid</span><span class="tag">Redis</span>
               </div>
@@ -2109,7 +2173,7 @@
           <div class="glass about-block" style="padding: 32px;">
             <span class="about-header-muted">I'M CURRENTLY...</span>
             <ul class="about-bullet-list">
-              <li>running and extending Ktrade, a trading terminal for Elysium: market discovery, wallet tracking and live execution</li>
+              <li>running and extending Ktrade, a multichain trading terminal: market discovery, wallet tracking and live execution</li>
               <li>deep in on-chain: cabal detection, smart money tracking, bundle analysis across EVM and Solana</li>
               <li>building automated trading infrastructure and algorithmic execution as a power user</li>
               <li>looking for a product role on a trading team</li>
@@ -2170,7 +2234,7 @@
             <div class="tl-year">2026</div>
             <div class="tl-body">
               <h4>Ktrade</h4>
-              <p>Built a trading terminal for Elysium and took it to live trading. My on-chain intelligence work feeds its bundle tools.</p>
+              <p>Built a multichain trading terminal and took it to live trading. My on-chain intelligence work feeds its bundle tools.</p>
             </div>
           </div>
         </div>
@@ -2267,7 +2331,7 @@
           <h3>Trading Product Builder & On-Chain Trader</h3>
           <div class="exp-company">Independent</div>
           <div class="exp-location">Dubai, UAE (Remote)</div>
-          <p class="exp-desc">I build and run trading products for on-chain markets. My main project is Ktrade, a web trading terminal for Elysium that I took to live trading on my own. Before that came wallet tracking, smart money detection and bundle analysis across Solana, Ethereum and Hyperliquid, with 20+ tools shipped. Dune Analytics practitioner.</p>
+          <p class="exp-desc">I've been in crypto since 2017 and went full-time in 2024. I trade every day, and most of what I build starts with something I needed while trading and couldn't find: a faster tool, or data nobody was showing. That's how I ended up with 20+ tools for tracking wallets, spotting coordinated buying and catching launches early across Solana, Ethereum and Hyperliquid. I learn by building, and I don't stop until I understand how something works.</p>
           <div class="exp-tags">
             <span class="tag">On-Chain Intelligence</span>
             <span class="tag">Solana</span>
